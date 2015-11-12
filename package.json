@@ -27,6 +27,7 @@
   ],
   "description": "ら抜き言葉を検出するtextlint rule",
   "devDependencies": {
+    "babel": "^5.8.34",
     "espower-babel": "^3.3.0",
     "mocha": "^2.3.3",
     "power-assert": "^1.1.0",

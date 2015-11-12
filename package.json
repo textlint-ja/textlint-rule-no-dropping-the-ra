@@ -1,0 +1,38 @@
+{
+  "name": "textlint-rule-no-dropping-the-ra",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azu/textlint-rule-no-dropping-the-ra.git"
+  },
+  "author": "azu",
+  "email": "azuciao@gmail.com",
+  "homepage": "https://github.com/azu/textlint-rule-no-dropping-the-ra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/textlint-rule-no-dropping-the-ra/issues"
+  },
+  "version": "1.0.0",
+  "main": "lib/no-dropping-the-ra.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib --source-maps",
+    "watch": "babel src --out-dir lib --watch --source-maps",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha"
+  },
+  "keywords": [
+    "textlint"
+  ],
+  "description": "ら抜き言葉を検出するtextlint rule",
+  "devDependencies": {
+    "espower-babel": "^3.3.0",
+    "mocha": "^2.3.3",
+    "power-assert": "^1.1.0",
+    "textlint-tester": "^0.4.0"
+  },
+  "dependencies": {
+    "kuromoji": "0.0.4"
+  }
+}

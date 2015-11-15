@@ -1,6 +1,7 @@
 // LICENSE : MIT
 "use strict";
-import kuromojin from "./kuromojin";
+import {RuleHelper} from "textlint-rule-helper";
+import kuromojin from "kuromojin";
 
 function isTargetVerb(token) {
     return token.pos == '動詞' &&
@@ -16,9 +17,13 @@ function isRaWord(token) {
 }
 
 export default function (context) {
+    const helper = new RuleHelper(context);
     let {Syntax, report, getSource, RuleError} = context;
     return {
         [Syntax.Str](node){
+            if (helper.isChildNode(node, [Syntax.Link, Syntax.Image, Syntax.BlockQuote, Syntax.Emphasis])) {
+                return;
+            }
             let text = getSource(node);
             return kuromojin(text).then(tokens => {
                 tokens.reduce((prev, current) => {

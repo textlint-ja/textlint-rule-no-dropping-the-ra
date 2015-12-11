@@ -11,6 +11,17 @@
 
 textlint >= 5.0
 
+## Usage
+
+Put "no-dropping-the-ra" to `.textlintrc`
+
+```js
+{
+  "rules": {
+    "no-dropping-the-ra": true
+  }
+}
+```
 
 ## Contributing
 

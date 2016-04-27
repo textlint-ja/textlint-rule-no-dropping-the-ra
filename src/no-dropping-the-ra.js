@@ -29,8 +29,8 @@ export default function (context) {
                 tokens.reduce((prev, current) => {
                     if (isTargetVerb(prev) && isRaWord(current)) {
                         report(node, new RuleError("ら抜き言葉を使用しています。", {
-                            column: (current.word_position - 1)
-                        }))
+                            index: (current.word_position - 1)
+                        }));
                     }
                     return current;
                 });

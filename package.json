@@ -38,10 +38,10 @@
     "espower-babel": "^4.0.0",
     "mocha": "^2.3.3",
     "power-assert": "^1.2.0",
-    "textlint-tester": "^0.4.0"
+    "textlint-tester": "^1.2.0"
   },
   "dependencies": {
-    "kuromojin": "^1.0.1",
+    "kuromojin": "^1.2.1",
     "textlint-rule-helper": "^1.1.4"
   }
 }

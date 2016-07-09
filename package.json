@@ -2,14 +2,14 @@
   "name": "textlint-rule-no-dropping-the-ra",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/azu/textlint-rule-no-dropping-the-ra.git"
+    "url": "git+https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra.git"
   },
   "author": "azu",
   "email": "azuciao@gmail.com",
-  "homepage": "https://github.com/azu/textlint-rule-no-dropping-the-ra",
+  "homepage": "https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/azu/textlint-rule-no-dropping-the-ra/issues"
+    "url": "https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra/issues"
   },
   "version": "1.0.2",
   "main": "lib/no-dropping-the-ra.js",
@@ -21,7 +21,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "babel src --out-dir lib --source-maps",
+    "build": "NODE_ENV=production babel src --out-dir lib --source-maps",
     "watch": "babel src --out-dir lib --watch --source-maps",
     "prepublish": "npm run --if-present build",
     "test": "mocha"

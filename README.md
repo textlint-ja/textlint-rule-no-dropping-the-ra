@@ -1,4 +1,4 @@
-# textlint-rule-no-dropping-the-ra
+# textlint-rule-no-dropping-the-ra [![Build Status](https://travis-ci.org/textlint-ja/textlint-rule-no-dropping-the-ra.svg?branch=master)](https://travis-ci.org/textlint-ja/textlint-rule-no-dropping-the-ra) [![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja)
 
 ら抜き言葉を検出する[textlint](https://github.com/textlint/textlint "textlint")ルールです。
 
@@ -37,4 +37,4 @@ MIT
 
 ## Reference
 
-- http://www.clear-code.com/blog/2015/8/29.html
+- [http://www.clear-code.com/blog/2015/8/29.html](http://www.clear-code.com/blog/2015/8/29.html)

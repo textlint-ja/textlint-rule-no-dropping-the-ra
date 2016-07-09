@@ -16,7 +16,7 @@ function isRaWord(token) {
         token.basic_form == 'れる'
 }
 
-export default function (context) {
+module.exports = function(context) {
     const helper = new RuleHelper(context);
     let {Syntax, report, getSource, RuleError} = context;
     return {
@@ -37,4 +37,4 @@ export default function (context) {
             })
         }
     }
-}
+};

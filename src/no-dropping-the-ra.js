@@ -16,6 +16,11 @@ function isRaWord(token) {
         token.basic_form == 'れる'
 }
 
+function isKoreru(token) {
+    return token.pos == '動詞' &&
+        token.basic_form == '来れる'
+}
+
 module.exports = function(context) {
     const helper = new RuleHelper(context);
     let {Syntax, report, getSource, RuleError} = context;
@@ -26,6 +31,14 @@ module.exports = function(context) {
             }
             let text = getSource(node);
             return kuromojin(text).then(tokens => {
+                tokens.forEach((token) => {
+                    if (isKoreru(token)) {
+                        report(node, new RuleError("ら抜き言葉を使用しています。", {
+                            index: (token.word_position)
+                        }));
+                    };
+                });
+
                 tokens.reduce((prev, current) => {
                     if (isTargetVerb(prev) && isRaWord(current)) {
                         report(node, new RuleError("ら抜き言葉を使用しています。", {

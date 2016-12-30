@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra/issues"
   },
-  "version": "1.0.3",
+  "version": "1.1.0",
   "main": "lib/no-dropping-the-ra.js",
   "files": [
     "lib",

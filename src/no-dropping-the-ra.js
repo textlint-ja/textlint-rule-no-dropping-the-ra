@@ -23,22 +23,25 @@ function isKoreru(token) {
 
 module.exports = function(context) {
     const helper = new RuleHelper(context);
-    let {Syntax, report, getSource, RuleError} = context;
+    const {Syntax, report, getSource, RuleError} = context;
     return {
         [Syntax.Str](node){
             if (helper.isChildNode(node, [Syntax.Link, Syntax.Image, Syntax.BlockQuote, Syntax.Emphasis])) {
                 return;
             }
-            let text = getSource(node);
+            const text = getSource(node);
             return kuromojin(text).then(tokens => {
                 tokens.forEach((token) => {
                     if (isKoreru(token)) {
                         report(node, new RuleError("ら抜き言葉を使用しています。", {
                             index: (token.word_position)
                         }));
-                    };
+                    }
                 });
-
+                // tokenのペアがない場合は無視する
+                if (tokens.length <= 1) {
+                    return;
+                }
                 tokens.reduce((prev, current) => {
                     if (isTargetVerb(prev) && isRaWord(current)) {
                         report(node, new RuleError("ら抜き言葉を使用しています。", {

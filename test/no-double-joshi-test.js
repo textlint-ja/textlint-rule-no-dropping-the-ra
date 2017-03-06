@@ -1,13 +1,14 @@
-import assert from "power-assert";
 import rule from "../src/no-dropping-the-ra";
 import TextLintTester from "textlint-tester";
-var tester = new TextLintTester();
+const tester = new TextLintTester();
 tester.run("no-dropping-the-ra", rule, {
     valid: [
         "お刺身を食べられない。",
         "見られる",
         "出られる",
-        "来られる"
+        "来られる",
+        "![](http://example.com)",
+        "[](http://example.com)"
     ],
     invalid: [
         {

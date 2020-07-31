@@ -1,7 +1,7 @@
 // LICENSE : MIT
 "use strict";
 import { RuleHelper } from "textlint-rule-helper";
-import kuromojin from "kuromojin";
+import { tokenize } from "kuromojin";
 
 function isTargetVerb(token) {
     return (
@@ -20,7 +20,7 @@ function isKoreru(token) {
     return token.pos == "動詞" && token.basic_form == "来れる";
 }
 
-module.exports = function(context) {
+module.exports = function (context) {
     const helper = new RuleHelper(context);
     const { Syntax, report, getSource, RuleError } = context;
     return {
@@ -29,7 +29,7 @@ module.exports = function(context) {
                 return;
             }
             const text = getSource(node);
-            return kuromojin(text).then(tokens => {
+            return tokenize(text).then(tokens => {
                 tokens.forEach(token => {
                     if (isKoreru(token)) {
                         report(

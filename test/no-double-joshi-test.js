@@ -32,6 +32,16 @@ tester.run("no-dropping-the-ra", rule, {
             ]
         },
         {
+            text: "この距離からでも見れる。",
+            errors: [
+                {
+                    message: "ら抜き言葉を使用しています。",
+                    line: 1,
+                    column: 10
+                }
+            ]
+        },
+        {
             text: "来れる",
             errors: [
                 {

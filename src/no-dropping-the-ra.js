@@ -16,8 +16,10 @@ function isRaWord(token) {
     return token.pos == "動詞" && token.pos_detail_1 == "接尾" && token.basic_form == "れる";
 }
 
-function isKoreru(token) {
-    return token.pos == "動詞" && token.basic_form == "来れる";
+function isSpecialCases(token) {
+    // Due to kuromoji.js's behavior, some dropping-ra words will be tokenized as one.
+    // See also https://github.com/takuyaa/kuromoji.js/issues/28
+    return token.pos == "動詞" && (token.basic_form == "来れる" || token.basic_form == "見れる");
 }
 
 module.exports = function (context) {
@@ -31,7 +33,7 @@ module.exports = function (context) {
             const text = getSource(node);
             return tokenize(text).then(tokens => {
                 tokens.forEach(token => {
-                    if (isKoreru(token)) {
+                    if (isSpecialCases(token)) {
                         report(
                             node,
                             new RuleError("ら抜き言葉を使用しています。", {

@@ -22,12 +22,12 @@ tester.run("no-dropping-the-ra", rule, {
             ]
         },
         {
-            text: "女の子が出れないんです",
+            text: "人が出れないんです",
             errors: [
                 {
                     message: "ら抜き言葉を使用しています。",
                     line: 1,
-                    column: 6
+                    column: 4
                 }
             ]
         },
@@ -62,12 +62,12 @@ tester.run("no-dropping-the-ra", rule, {
             ]
         },
         {
-            text: "女の子が来れないんです",
+            text: "人が来れないんです",
             errors: [
                 {
                     message: "ら抜き言葉を使用しています。",
                     line: 1,
-                    column: 6
+                    column: 4
                 }
             ]
         }

@@ -33,10 +33,10 @@
   ],
   "description": "ら抜き言葉を検出するtextlint rule",
   "devDependencies": {
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
     "power-assert": "^1.4.1",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.2",
     "textlint-scripts": "^3.0.0"
   },
   "dependencies": {

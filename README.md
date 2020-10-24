@@ -1,10 +1,25 @@
-# textlint-rule-no-dropping-the-ra [![Build Status](https://travis-ci.org/textlint-ja/textlint-rule-no-dropping-the-ra.svg?branch=master)](https://travis-ci.org/textlint-ja/textlint-rule-no-dropping-the-ra) [![Gitter](https://badges.gitter.im/textlint-ja/textlint-ja.svg)](https://gitter.im/textlint-ja/textlint-ja)
+# textlint-rule-no-dropping-the-ra [![Actions Status: test](https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra/workflows/test/badge.svg)](https://github.com/textlint-ja/textlint-rule-no-dropping-the-ra/actions?query=workflow%3A"test")
 
 ら抜き言葉を検出する[textlint](https://github.com/textlint/textlint "textlint")ルールです。
 
-- ◯ お刺身を食べられない
-- ✗ お刺身を食べれない。
+**OK**:
 
+```
+お刺身を食べられない。
+見られる
+出られる
+来られる
+```
+
+**NG**:
+
+```
+お刺身を食べれない。
+女の子が出れないんです
+この距離からでも見れる。
+今日は来れる？
+女の子が来れないんです
+```
 ## Installation
 
     npm install textlint-rule-no-dropping-the-ra

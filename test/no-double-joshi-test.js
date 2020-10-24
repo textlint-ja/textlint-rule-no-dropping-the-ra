@@ -42,12 +42,22 @@ tester.run("no-dropping-the-ra", rule, {
             ]
         },
         {
-            text: "来れる",
+            text: "今日は来れる？",
             errors: [
                 {
                     message: "ら抜き言葉を使用しています。",
                     line: 1,
-                    column: 2
+                    column: 5
+                }
+            ]
+        },
+        {
+            text: "今日は来れる？",
+            errors: [
+                {
+                    message: "ら抜き言葉を使用しています。",
+                    line: 1,
+                    column: 5
                 }
             ]
         },

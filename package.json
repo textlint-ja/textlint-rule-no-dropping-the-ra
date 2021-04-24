@@ -35,7 +35,6 @@
   "description": "ら抜き言葉を検出するtextlint rule",
   "devDependencies": {
     "lint-staged": "^10.5.4",
-    "power-assert": "^1.4.1",
     "prettier": "^2.2.1",
     "textlint-scripts": "^3.0.0"
   },

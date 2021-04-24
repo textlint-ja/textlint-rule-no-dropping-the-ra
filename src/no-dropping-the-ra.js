@@ -31,8 +31,8 @@ module.exports = function (context) {
                 return;
             }
             const text = getSource(node);
-            return tokenize(text).then(tokens => {
-                tokens.forEach(token => {
+            return tokenize(text).then((tokens) => {
+                tokens.forEach((token) => {
                     if (isSpecialCases(token)) {
                         report(
                             node,

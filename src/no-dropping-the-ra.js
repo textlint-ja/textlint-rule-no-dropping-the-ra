@@ -22,7 +22,7 @@ function isSpecialCases(token) {
     return token.pos == "動詞" && (token.basic_form == "来れる" || token.basic_form == "見れる");
 }
 
-module.exports = function (context) {
+export default function (context) {
     const helper = new RuleHelper(context);
     const { Syntax, report, getSource, RuleError } = context;
     return {

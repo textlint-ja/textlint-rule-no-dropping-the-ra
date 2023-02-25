@@ -2,6 +2,8 @@
 
 ら抜き言葉を検出する[textlint](https://github.com/textlint/textlint "textlint")ルールです。
 
+ら抜き言葉は話し言葉なので、文章では避けるようにするためのルールです。
+
 **OK**:
 
 ```
@@ -50,4 +52,5 @@ MIT
 
 ## Reference
 
+- [文化庁 | 国語施策・日本語教育 | 国語施策情報 | 第20期国語審議会 | 新しい時代に応じた国語施策について（審議経過報告） | Ｉ 言葉遣いに関すること](https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kakuki/20/tosin03/09.html)
 - [http://www.clear-code.com/blog/2015/8/29.html](http://www.clear-code.com/blog/2015/8/29.html)

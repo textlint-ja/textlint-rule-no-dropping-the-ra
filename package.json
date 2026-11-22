@@ -36,11 +36,11 @@
   "devDependencies": {
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "textlint-scripts": "^3.0.0"
+    "textlint-scripts": "^16.1.2"
   },
   "dependencies": {
-    "kuromojin": "^3.0.0",
-    "textlint-rule-helper": "^2.1.1"
+    "kuromojin": "^3.1.0",
+    "textlint-rule-helper": "^2.6.0"
   },
   "prettier": {
     "singleQuote": false,
@@ -52,5 +52,6 @@
     "*.{js,jsx,ts,tsx,css}": [
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "pnpm@12.21.0"
 }
